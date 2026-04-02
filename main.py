@@ -21,7 +21,7 @@ st.write(f'Quận có giá nhà thấp nhất: {q_thap}')
 
 # 3. Loại hình nhà ở có giá cao nhất
 st.subheader('Loại hình nhà ở có giá cao nhất')
-loai_cao = df.groupby('Loaị hình nhà ở')['Giá bán (tổng)'].mean().idxmax()
+loai_cao = df.groupby('Loại hình nhà ở')['Giá bán (tổng)'].mean().idxmax()
 st.write(f'Loại hình nhà đắt nhất: {loai_cao}')
 
 # 4. Ngôi nhà đắt nhất và rẻ nhất
