@@ -6,7 +6,7 @@ gia_100 = df[df['Gia ban/n2'] > 100]
 st.dataframe(gia_100)
 
 st.subheader('Quan co gia nha cao nhat, thap nhat')
-q_cao = df.groupby('Quan/Huyen')['Gia ban(tong)'].max().idxnax()
+q_cao = df.groupby('Quan/Huyen')['Gia ban(tong)'].max().idxmax()
 q_thap = df.groupby('Quan/Huyen')['Gia ban(tong)'].min().idxmin()
 st.write(f'Quan co gia nha cao nhat: {q_cao}')
 st.write(f'Quan co gia nha thap nhat: {q_thap}')
