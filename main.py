@@ -13,21 +13,21 @@ st.dataframe(gia_100)
 
 # 2. Quận có giá cao nhất, thấp nhất
 st.subheader('Quận có giá nhà cao nhất, thấp nhất')
-q_cao = df.groupby('Quan/Huyen')['Gia ban (tong)'].max().idxmax()
-q_thap = df.groupby('Quan/Huyen')['Gia ban (tong)'].min().idxmin()
+q_cao = df.groupby('Quận/Huyện')['Giá bán (tổng)'].max().idxmax()
+q_thap = df.groupby('Quận/Huyện')['Giá bán (tổng)'].min().idxmin()
 
 st.write(f'Quận có giá nhà cao nhất: {q_cao}')
 st.write(f'Quận có giá nhà thấp nhất: {q_thap}')
 
 # 3. Loại hình nhà ở có giá cao nhất
 st.subheader('Loại hình nhà ở có giá cao nhất')
-loai_cao = df.groupby('Loai hinh nha o')['Gia ban (tong)'].mean().idxmax()
+loai_cao = df.groupby('Loaị hình nhà ở')['Giá bán (tổng)'].mean().idxmax()
 st.write(f'Loại hình nhà đắt nhất: {loai_cao}')
 
 # 4. Ngôi nhà đắt nhất và rẻ nhất
 st.subheader('Ngôi nhà đắt nhất, rẻ nhất')
-dat_nhat = df.loc[df['Gia ban (tong)'].idxmax()]
-re_nhat = df.loc[df['Gia ban (tong)'].idxmin()]
+dat_nhat = df.loc[df['Giá bán (tổng)'].idxmax()]
+re_nhat = df.loc[df['Giá bán (tổng)'].idxmin()]
 
 st.write('Ngôi nhà đắt nhất:')
 st.write(dat_nhat)
