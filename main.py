@@ -8,7 +8,7 @@ st.title('Phân tích giá nhà tại Hà Nội')
 
 # 1. Danh sách nhà giá > 100 triệu/m2
 st.subheader('DS các ngôi nhà giá > 100 triệu/m2')
-gia_100 = df[df['Gia ban/m2'] > 100]
+gia_100 = df[df['Giá bán/m2'] > 100]
 st.dataframe(gia_100)
 
 # 2. Quận có giá cao nhất, thấp nhất
