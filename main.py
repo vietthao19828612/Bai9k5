@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Đọc dữ liệu
-df = pd.read_csv('data_csv')
+df = pd.read_csv('data.csv')
 
 st.title('Phân tích giá nhà tại Hà Nội')
 
